@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightsalmon;
+}
+
+main {
+    background-color: white;
+    width: 60%;
+    min-height: 50vh;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.39);
+    text-align: center;
+}
+
+h1 {
+    margin: 10px;
+    font-size: 2em;
+    font-variant: small-caps;
+    text-shadow: 0.5px 0.5px 1px black;
+}
+
+input#cidade {
+    background-image: linear-gradient(to top, rgba(180, 176, 176, 0.397), rgba(219, 219, 219, 0.25));
+    width: 60%;
+    max-width: 200px;
+    height: 35px;
+    padding: 2px;
+    font-size: 1em;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+}
+
+input#cidade:focus {
+    outline: none;
+}
+
+input#buscar {
+    background-color: rgba(211, 211, 211, 0.507);
+    width: 50px;
+    height: 42px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+input#buscar:hover {
+    background-color:  rgba(126, 126, 126, 0.596);
+}
+
+footer {
+    margin-top: 10px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
