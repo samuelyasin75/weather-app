@@ -5,15 +5,15 @@ document.querySelector('#buscar').addEventListener('click', async (Event) => {
         alert('Preencha o nome da cidade')
     }
     // Recolhendo o código da cidade atráves do nome
-    var apiKey = {method: 'GET', headers: {Authorization: 'Bearer zpka_a7b5081ba5434130baa1bee2334e9c9c_2752036a'}}
+    var apiKey = {method: 'GET', headers: {Authorization: 'Bearer zpka_8111cf3b21b2491cbd9a140cfe47a967_04b7d335'}}
     var apiUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?q=${encodeURI(cidadeNome)}&language=pt-br&details=true`
     var results = await fetch(apiUrl, apiKey)
     var json = await results.json()
     var cidadeDados = {nome: json[0].EnglishName, code: json[0].Key, pais: json[0].Country.ID}
 
     // Recolhendo os dados climáticos atráves do código da cidade
-    var apiKey = {method: 'GET', headers: {Authorization: 'Bearer zpka_a7b5081ba5434130baa1bee2334e9c9c_2752036a'}}
-    var apiUrl = `https://dataservice.accuweather.com/currentconditions/v1/${encodeURI(cidadeDados.code)}?language=pt-br`
+    var apiKey = {method: 'GET', headers: {Authorization: 'Bearer zpka_8111cf3b21b2491cbd9a140cfe47a967_04b7d335'}}
+    var apiUrl = `https://dataservice.accuweather.com/currentconditions/v1/${cidadeDados.code}?language=pt-br`
     
     var results = await fetch(apiUrl, apiKey)
     var json = await results.json()
